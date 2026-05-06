@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Bootstrap 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding-top: 50px;
+        }
+        .panel-register {
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .panel-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+        .btn-register {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+        /* Style cho vùng hiển thị kết quả */
+        #thongBaoKetQua {
+            margin-top: 20px;
+            display: none; /* Mặc định ẩn đi */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default panel-register">
+                <div class="panel-heading">Tạo tài khoản</div>
+                <div class="panel-body">
+                    <form id="formDangKy">
+                        <!-- Họ và tên -->
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nhập họ tên" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@vi-du.com" required>
+                        </div>
+
+                        <!-- Mật khẩu -->
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Mật khẩu" required>
+                        </div>
+
+                        <!-- Xác nhận mật khẩu -->
+                        <div class="form-group">
+                            <label for="confirmPassword">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận lại" required>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="terms"> Tôi đồng ý với điều khoản
+                            </label>
+                        </div>
+
+                        <!-- Nút bấm: Đổi thẻ <a> thành <button type="button"> để xử lý JS -->
+                        <button type="button" class="btn btn-register btn-block" onclick="xuLyHienThi()">Đăng ký ngay</button>
+                    </form>
+
+                    <!-- VÙNG HIỂN THỊ THÔNG TIN (Dùng innerHTML để chèn nội dung vào đây) -->
+                    <div id="thongBaoKetQua" class="alert alert-success">
+                        <!-- Nội dung sẽ xuất hiện ở đây -->
+                    </div>
+
+                </div>
+                <div class="panel-footer text-center">
+                    Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function xuLyHienThi() {
+    // 1. Sử dụng getElementById để lấy giá trị từ form
+    var hoTen = document.getElementById("fullName").value;
+    var email = document.getElementById("email").value;
+    var dongY = document.getElementById("terms").checked;
+
+    // Kiểm tra tính hợp lệ đơn giản
+    if (hoTen === "" || email === "") {
+        alert("Vui lòng nhập đầy đủ Họ tên và Email!");
+        return;
+    }
+    if (!dongY) {
+        alert("Bạn phải đồng ý với điều khoản!");
+        return;
+    }
+
+    // 2. Sử dụng innerHTML để hiển thị thông tin ra giao diện
+    var vungKetQua = document.getElementById("thongBaoKetQua");
+    
+    vungKetQua.style.display = "block"; // Hiện khung thông báo
+    vungKetQua.innerHTML = "<h4>Đăng nhập thành công!</h4>" + 
+                           "<p>Chào mừng thành viên: <b>" + hoTen + "</b></p>" +
+                           "<p>Email đăng ký: <i>" + email + "</i></p>";
+    
+    // Tùy chọn: Xóa sạch form sau khi đăng ký thành công
+    // document.getElementById("formDangKy").reset();
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
