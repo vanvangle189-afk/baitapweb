@@ -42,6 +42,116 @@
   </style>
 </head>
 <body>
+<!--dangnhap-->  
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="panel-heading">Tạo tài khoản</div>
+        </div>
+        <div class="modal-body">
+          <form action="/action_page.php">
+
+    <div class="row">
+        <div>
+            <div class="panel panel-default panel-register">
+
+                <div class="panel-body">
+                    <form>
+                        <!-- Họ và tên -->
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nhập họ tên">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@vi-du.com">
+                        </div>
+
+                        <!-- Mật khẩu -->
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
+                        </div>
+
+                        <!-- Xác nhận mật khẩu -->
+                        <div class="form-group">
+                            <label for="confirmPassword">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận lại">
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Tôi đồng ý với điều khoản
+                            </label>
+                        </div>
+
+                        <!-- Nút bấm -->
+                        <button type="submit" class="btn btn-register btn-block">Đăng ký ngay</button>
+                    </form>
+                </div>
+                <div class="panel-footer text-center">
+                    Bạn đã có tài khoản? <a href="dangky.html"class="glyphicon glyphicon-log-in" class="btn btn-info btn-lg" data-toggle ="modal" data-target="#myRegisterModal"> Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<!-- Đăng ký -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myRegisterModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <form action="/action_page.php" >
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default"><a href="dangky.html">Gửi</a></button>
+</form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -60,6 +170,12 @@
         <li><a href="trainghiem.html">Trải Nghiệm</a></li>
         <li><a href="chiase.html">Chia sẻ</a></li>
         <li><a href="lienhe.html">Liên Hệ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"></span> Đăng ký</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myRegisterModal"></span> Đăng Nhập</a></li>
       </ul>
     </div>
   </div>
@@ -96,7 +212,7 @@
       </div>
     </div>
   </div>
-</div>S
+</div>
 
 <footer class="container-fluid text-center">
  <P>Lê Văn Vàng - DA25TTD-110125206</P>
