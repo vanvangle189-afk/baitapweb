@@ -1,73 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Cá Nhân - Lê Văn Vàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding-top: 50px;
+        }
+        .panel-register {
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .panel-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+        .btn-register {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
 </head>
-<body bgcolor="#f4f4f4">
+<body>
 
-    <table width="1000" border="1" align="center" cellpadding="20" cellspacing="0" bgcolor="#ffffff">
-        
-        <tr bgcolor="#003366">
-            <td colspan="2" align="center">
-                <h1><font color="#ffffff">HỒ SƠ CÁ NHÂN</font></h1>
-                <p><font color="#ffcc00">Đại Học Trà Vinh - Trường Kỹ Thuật và Công Nghệ</font></p>
-            </td>
-        </tr>
+<div class="container">
+    <div class="row">
+        <div class=" col-md-10 col-md-offset-1">
+            
+            <div class="panel  panel-register">
+                <img width="40%" height="40%" src="anhtvu/TVU-RGB.png" alt="Logo Đại học Trà Vinh" class="img-responsive center-block" style="max-width: 150px; margin-top: 20px;">
+                <div class="panel-heading">
+                    <h2>PHẦN MIỀM TIN HỌC <br> ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CHO SINH VIÊN CHÍNH QUY <br>TẠI ĐẠI HỌC TRÀ VINH</h2>
+                </div>
 
+                <div class="panel-body">
+                    <form action="/action_page.php">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <table width="100%" style="margin-top: 10px;"> 
         <tr>
-            <td width="400" valign="top">
-                <h3>THÔNG TIN SINH VIÊN</h3>
-                <hr align="left" width="50%">
-                
-                <p><b>Họ và Tên:</b> Lê Văn Vàng</p>
-                <hr align="left">
-                
-                <p><b>Năm sinh:</b> 06-03-2007</p>
-                <hr align="left">
-                
-                <p><b>Giới tính:</b> Nam</p>
-                <hr align="left">
-                
-                <p><b>Học tại:</b> ĐẠI HỌC TRÀ VINH</p>
-                <hr align="left">
-                
-                <p><b>Ngành:</b> Công Nghệ Thông Tin</p>
-                <hr align="left">
-                
-                <p><b>Lớp:</b> DA25TTD</p>
-            </td>
-
-            <td width="600" valign="top">
-                <h3>DANH SÁCH BÀI TẬP</h3>
-                
-                <table width="100%" border="1" cellpadding="10" cellspacing="0">
-                    <tr bgcolor="#eeeeee">
-                        <th>Tên bài tập</th>
-                        <th>Liên kết</th>
-                    </tr>
-                    <tr>
-                        <td>Bài tập 1: Web thơ </td>
-                        <td align="center"><a href="baitap1.html">Xem</a></td>
-                    </tr>
-                    <tr>
-                        <td>Bài tập 2: Web nhạc</td>
-                        <td align="center"><a href="baitap2-1.html">Xem</a></td>
-                    </tr>
-                    <tr>
-                        <td>Bài tập 3:Giới thiệu bản thân</td>
-                        <td align="center"><a href="dangky.html">Xem</a></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" align="center" bgcolor="#dddddd">
-                <small>Lê Văn Vàng - DA25TTD-110125206</small>
-            </td>
+            <td   width="55%"><label><input type="checkbox"> Nhớ mật khẩu</label></td>
+            <td width="45%" style="text-align: right;"><button type="submit" class="btn btn-primary" style="width: 100%;" >Đăng nhập</button></td>
         </tr>
     </table>
+    <br>
 
+    <table width="100% "  >
+        <tr>
+            <td width="100%" type="submit" class="btn btn-primary"><a  align="center" href="#"style="color: white; ">Sinh viên (Đăng nhập bẳng Email microsoft) </a></td>
+    </table>
+    <br>
+    <table width="100% "  >
+        <tr>
+            <td width="100%" type="submit" class="btn btn-danger"><a  align="center" href="#" style="color: white;">Giảng viên  (Đăng nhập bẳng Email TVU) </a></td>
+        </tr>   
+    </table>
+    
+
+
+
+  </div>
+</form>
+                </div>
+                <div class="panel-footer">
+                  <a href="ttdk.html">Quên mật khẩu ?</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<a href="index.html" style="display: block; text-align: center; font-weight: bold;">Quay lại trang chủ</a>
 </body>
 </html>
