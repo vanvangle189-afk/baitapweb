@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding-top: 50px;
+        }
+        .panel-register {
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .panel-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+        .btn-register {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class=" col-md-10 col-md-offset-1">
+            
+            <div class="panel  panel-register">
+               <p align="center"><img src="anhtvu/TVU-RGB.png" alt="Logo Đại học Trà Vinh" class="img-responsive center-block" style="max-width: 150px; margin-top: 20px;"></p>
+                <div class="panel-heading">
+                    <h2>PHẦN MIỀM TIN HỌC <br> ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CHO SINH VIÊN CHÍNH QUY <br>TẠI ĐẠI HỌC TRÀ VINH</h2>
+                </div>
+
+                <div class="panel-body">
+                    <form action="/action_page.php">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <table width="100%" style="margin-top: 10px;"> 
+        <tr>
+            <td   width="55%"><label><input type="checkbox"> Nhớ mật khẩu</label></td>
+            <td width="45%" style="text-align: right;"><button type="submit" class="btn btn-primary" style="width: 100%;" >Đăng nhập</button></td>
+        </tr>
+    </table>
+    <br>
+
+    <table width="100% "  >
+        <tr>
+            <td width="100%" type="submit" class="btn btn-primary"><a  align="center" href="#"style="color: white; ">Sinh viên (Đăng nhập bẳng Email microsoft) </a></td>
+    </table>
+    <br>
+    <table width="100% "  >
+        <tr>
+            <td width="100%" type="submit" class="btn btn-danger"><a  align="center" href="#" style="color: white;">Giảng viên  (Đăng nhập bẳng Email TVU) </a></td>
+        </tr>   
+    </table>
+    
+
+
+
+  </div>
+</form>
+                </div>
+                <div class="panel-footer">
+                  <a href="ttdk.html">Quên mật khẩu ?</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<a href="index.html" style="display: block; text-align: center; font-weight: bold;">Quay lại trang chủ</a>
+</body>
+</html>

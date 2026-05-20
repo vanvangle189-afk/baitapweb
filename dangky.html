@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding-top: 50px;
+        }
+        .panel-register {
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .panel-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 0;
+        }
+        .btn-register {
+            background-color: #337ab7;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default panel-register">
+                <div class="panel-heading">Tạo tài khoản</div>
+                <div class="panel-body">
+                    <form>
+
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nhập họ tên">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Địa chỉ Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@vi-du.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận lại">
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Tôi đồng ý với điều khoản
+                            </label>
+                        </div>
+
+                        <a href="dangnhap.html" class="btn btn-register btn-block"> Đăng ký ngay</a>
+                    </form>
+                </div>
+                <div class="panel-footer text-center">
+                    Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<a href="index.html" style="display: block; text-align: center; font-weight: bold;">Quay lại trang chủ</a>
+    
+</body>
+</html>

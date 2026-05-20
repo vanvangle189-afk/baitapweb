@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="data:image/png;base64,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">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="baitap3.html">Giới Thiệu</a></li>
+        <li><a href="kinhnghiem.html">Kinh Nghiệm</a></li>
+        <li><a href="trainghiem.html">Trải Nghiệm</a></li>
+        <li><a href="chiase.html">Chia sẻ</a></li>
+        <li><a href="lienhe.html">Liên Hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="col-sm-13 text-left" style="background-color: #ffffff; padding: 30px; border-radius: 15px; box-shadow: 0px 0px 15px rgba(0,0,0,0.1);">
+    
+    <h2 style=" font-weight: bold; border-bottom: 2px solid #337ab7; padding-bottom: 10px; margin-bottom: 25px;">
+        THÔNG TIN LIÊN HỆ
+    </h2>
+
+    <div class="row">
+        <div class="col-sm-7">
+            <p style="font-size: 16px; margin-bottom: 20px;">
+                Chào bạn! Nếu bạn có bất kỳ thắc mắc nào về học tập hoặc muốn giao lưu về CNTT, hãy kết nối với mình qua các kênh sau:
+            </p>
+
+            <div style="margin-bottom: 15px;">
+                <a href="https://www.facebook.com/share/1JYi3GkuvR/" target="_blank" class="btn btn-primary btn-block" style="padding: 12px; font-size: 16px; border-radius: 10px;">
+                    <i class="glyphicon glyphicon-user"></i> Facebook Cá Nhân
+                </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a href="tel:0989819709" class="btn btn-success btn-block" style="padding: 12px; font-size: 16px; border-radius: 10px;">
+                    <i class="glyphicon glyphicon-phone"></i> Gọi: 0989819709
+                </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a href="mailto:levanvangda25ttd@gmail.com" class="btn btn-info btn-block" style="padding: 12px; font-size: 16px; border-radius: 10px;">
+                    <i class="glyphicon glyphicon-envelope"></i> Gửi Email
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-5 text-center" style="border-left: 1px solid #eee;">
+            <h4 style=" font-weight: bold;">Quét mã Zalo</h4>
+            <div style="margin-top: 15px;">
+                <p align = "center"><img src="https://mail.google.com/mail/u/0?ui=2&ik=ef3eea9b67&attid=0.2&permmsgid=msg-a:r-3640770276853696243&th=19dd9e1892134d5a&view=fimg&fur=ip&permmsgid=msg-a:r-3640770276853696243&sz=s0-l75-ft&attbid=ANGjdJ8JOYVPsrXi2_z47nAAdQwxk7CueddqBWN00iudV0vvTJtGrLw2Ah11p8yCSlcHEm04OY6zLiwgi2DqAGSt7DEmzD_aG7k3eb7fiFDg9YC5FqszmoiJsBGBLmo&disp=emb&realattid=ii_19dd9e1710a4799b47d1&zw" alt="Zalo QR Code" class="img-thumbnail" style="width: 200px; height: 200px; object-fit: cover;">
+                </p>
+            </div>
+            <p><small>Mở Zalo và quét mã để kết bạn nhé!</small></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="text-center">
+        <p><b>Địa chỉ:</b> Đại học Trà Vinh - Số 126 Nguyễn Thiện Thành, Trà Vinh.</p>
+        <p><i>Rất vui được kết nối với bạn!</i></p>
+    </div>
+</div>
+</body>
+</html>
